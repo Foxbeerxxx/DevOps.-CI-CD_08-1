@@ -102,8 +102,9 @@ go version
 
 ![<Джоба1>](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/polomka/img/img11.png)`
 
-
-
+7. ` Первое задание закрыл`
+![<Джоба2>](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/polomka/img/img12.png)`
+![<Джоба2>](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/polomka/img/img13.png)`
 
 
 
