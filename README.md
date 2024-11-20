@@ -92,13 +92,15 @@ go version
 
 ![<Джоба>](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/polomka/img/img9.png)`
 
-45. ` Делаем траблшутинг , поднимаем nexus, ставим докер как итог ` 
+5. ` Делаем траблшутинг , поднимаем nexus, ставим докер как итог ` 
 `Джоба уже прогружается гараздо дальше`
 
 ![<Джоба1>](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/polomka/img/img10.png)`
 
 
+6. ` Поднятый nexus c настройками ` 
 
+![<Джоба1>](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/polomka/img/img11.png)`
 
 
 
