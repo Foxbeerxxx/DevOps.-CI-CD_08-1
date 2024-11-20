@@ -33,6 +33,29 @@ sudo apt install openjdk-11-jdk
 ```
 ![Установка java](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/main/img/img1.png)`
 
+`Импортируем ключ репозитория для jenkins.`
+```
+wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+```
+![ключ репозитория для jenkins](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/main/img/img2.png)`
+
+`Затем устанавливаем Jenkins из пакета для debian/ubuntu:`
+```
+sudo apt-get update
+sudo apt-get install jenkins
+```
+`Сразу сервис не заработал, пришлось выполнить траблшутинг , в результате jenkins не устроила версия Java,но после запустил и все заработало`
+```
+sudo -u jenkins /usr/bin/jenkins
+```
+![ключ репозитория для jenkins](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/main/img/img3.png)`
+
+
+
+
+
+
+
 
 2. `Заполните здесь этапы выполнения, если требуется ....`
 3. `Заполните здесь этапы выполнения, если требуется ....`
