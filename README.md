@@ -84,9 +84,9 @@ go version
 ![Установка](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/main/img/img6.png)`
 
 `После установки лучше перезагрузить jenkins`
-![Перезагрузка](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/main/img/img6.png)`
-
-
+![Перезагрузка](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/main/img/img7.png)`
+3. `Скопировал репозиторий`
+![копирование](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/main/img/img8.png)`
 
 
 
