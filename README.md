@@ -50,14 +50,39 @@ sudo -u jenkins /usr/bin/jenkins
 ```
 ![ключ репозитория для jenkins](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/main/img/img3.png)`
 
+`Проверяем результат в браузере и видим:`
+![ключ репозитория для jenkins](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/main/img/img4.png)`
+`Готово`
+2. `Установите на машину с jenkins golang`
+`Ответ:`
+`Установим необходимые утилиты
+```
+   sudo apt update
+   sudo apt install wget tar`
+```
+`Приступаем к установке`
+`Скачиваем последнюю версию Go` 
+```
+wget https://golang.org/dl/go1.20.5.linux-amd64.tar.gz
+```
+`Распаковывем` 
+```
+sudo tar -C /usr/local -xzvf go1.20.5.linux-amd64.tar.gz
+```
+`Устанавливаем переменную окружения` 
+```
+echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.bashrc
+   source ~/.bashrc
+```
+`Проверяем версию GO`
+```
+go version
+```
 
 
 
 
 
-
-
-2. `Заполните здесь этапы выполнения, если требуется ....`
 3. `Заполните здесь этапы выполнения, если требуется ....`
 4. `Заполните здесь этапы выполнения, если требуется ....`
 5. `Заполните здесь этапы выполнения, если требуется ....`
