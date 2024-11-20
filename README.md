@@ -31,7 +31,7 @@
 ```
 sudo apt install openjdk-11-jdk 
 ```
-![Установка java](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/tree/main/img1.png)`
+![Установка java](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/main/img/img1.png)`
 
 
 2. `Заполните здесь этапы выполнения, если требуется ....`
