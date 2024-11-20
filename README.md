@@ -87,9 +87,10 @@ go version
 ![Перезагрузка](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/main/img/img7.png)`
 3. `Скопировал репозиторий`
 ![копирование](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/main/img/img8.png)`
-4. `Создал в Jenkins новую джобу по условию 1.4 как итог, он не запустится так как  сервер не подготовлен не по докеру не по Nexys, выполнится лишь первое условие это копирование репозитория`
+4. `Создал в Jenkins новую джобу по условию 1.4 как итог, он не запустится так как  сервер не подготовлен не по докеру не по Nexys, выполнится лишь` 
+`первое  условие это копирование репозитория`
 
-![job](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/main/img/img9.png)`
+![<Джоба>](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/main/img/img9.png)`
 
 
 
