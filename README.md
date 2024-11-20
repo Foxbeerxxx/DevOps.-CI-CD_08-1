@@ -51,7 +51,7 @@ sudo -u jenkins /usr/bin/jenkins
 ![ключ репозитория для jenkins](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/main/img/img3.png)`
 
 `Проверяем результат в браузере и видим:`
-![ключ репозитория для jenkins](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/main/img/img4.png)`
+![jenkins](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/main/img/img4.png)`
 `Готово`
 2. `Установите на машину с jenkins golang`
 `Ответ:`
@@ -78,6 +78,18 @@ echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.bashrc
 ```
 go version
 ```
+`Затем заходим в jenkins и в настройках устанавливаем GO`
+![Установка](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/main/img/img5.png)`
+
+![Установка](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/main/img/img6.png)`
+
+`После установки лучше перезагрузить jenkins`
+![Перезагрузка](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/main/img/img6.png)`
+
+
+
+
+
 
 
 
