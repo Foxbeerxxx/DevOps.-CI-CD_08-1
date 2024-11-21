@@ -114,9 +114,48 @@ go version
 
 ### Задание 2
 
-`Приведите ответ в свободной форме........`
+`Создайте новый проект pipeline.`
 
-1. `Заполните здесь этапы выполнения, если требуется ....`
+1. `Заходим в Jenkins и создаем новый pipline`
+`С кодом:`
+```
+pipeline {
+    agent any
+
+    stages {
+        stage('Git') {
+            steps {
+                // Клонируем репозиторий
+                git 'https://github.com/Foxbeerxxx/sdvps-materials-test.git'
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                // Запускаем тесты с использованием правильного пути к Go
+                sh '/usr/local/go/bin/go test ./...'
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                // Строим образ Docker
+                sh "docker build . -t ubuntu-bionic:8082/hello-world:v${env.BUILD_NUMBER}"
+            }
+        }
+    }
+}
+```
+`Запускаем сборку`
+![<Джоба5>](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/polomka/img/img14.png)
+
+`Видим`
+![<Джоба6>](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/polomka/img/img15.png)
+
+![<Джоба6>](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/polomka/img/img16.png)
+
+
+
 2. `Заполните здесь этапы выполнения, если требуется ....`
 3. `Заполните здесь этапы выполнения, если требуется ....`
 4. `Заполните здесь этапы выполнения, если требуется ....`
