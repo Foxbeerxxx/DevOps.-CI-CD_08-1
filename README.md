@@ -155,34 +155,54 @@ pipeline {
 ![<Джоба6>](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/polomka/img/img16.png)
 
 
-
-2. `Заполните здесь этапы выполнения, если требуется ....`
-3. `Заполните здесь этапы выполнения, если требуется ....`
-4. `Заполните здесь этапы выполнения, если требуется ....`
-5. `Заполните здесь этапы выполнения, если требуется ....`
-6. 
-
-```
-Поле для вставки кода...
-....
-....
-....
-....
-```
-
-`При необходимости прикрепитe сюда скриншоты
-![Название скриншота 2](ссылка на скриншот 2)`
-
-
 ---
 
 ### Задание 3
 
-`Приведите ответ в свободной форме........`
 
-1. `Заполните здесь этапы выполнения, если требуется ....`
-2. `Заполните здесь этапы выполнения, если требуется ....`
-3. `Заполните здесь этапы выполнения, если требуется ....`
+
+1. `Устанавливаем на машину Nexus`
+
+![<1>](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/polomka/img/1.png)
+2. `Создаём raw-hosted репозиторий`
+
+![<2>](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/polomka/img/2.png)
+3. `Изменяем pipeline так, чтобы вместо Docker-образа собирался бинарный go-файл`
+```
+pipeline {
+    agent any
+    stages {
+        stage('Git') {
+            steps {
+                git url: 'https://github.com/Foxbeerxxx/sdvps-materials-test.git', branch: 'main'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh '/usr/local/go/bin/go test ./...'
+            }
+        }
+        stage('Build') {
+            steps {
+                // Сохраняем исполняемый файл в рабочую директорию Jenkins
+                sh 'CGO_ENABLED=0 GOOS=linux /usr/local/go/bin/go build -a -installsuffix nocgo -o ./app'
+            }
+        }
+    }
+}
+```
+
+![<3>](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/polomka/img/3.png)
+![<4>](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/polomka/img/4.png)
+![<5>](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/polomka/img/5.png)
+
+
+
+
+
+
+
+
 4. `Заполните здесь этапы выполнения, если требуется ....`
 5. `Заполните здесь этапы выполнения, если требуется ....`
 6. 
