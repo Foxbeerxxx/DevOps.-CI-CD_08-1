@@ -196,10 +196,42 @@ pipeline {
 ![<4>](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/polomka/img/4.png)
 ![<5>](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/polomka/img/5.png)
 
-`Это было очень сложно`
+4. `Загружаем файл в репозиторий с помощью jenkins`
+`Создал новый pipline на основе предыдущего с загрузкой репозитория в nexus`
+```
+pipeline {
+    agent any
+    stages {
+        stage('Git') {
+            steps {
+                git url: 'https://github.com/Foxbeerxxx/sdvps-materials-test.git', branch: 'main'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh '/usr/local/go/bin/go test ./...'
+            }
+        }
+        stage('Build') {
+            steps {
+                // Сохраняем исполняемый файл в рабочую директорию Jenkins
+                sh 'CGO_ENABLED=0 GOOS=linux /usr/local/go/bin/go build -a -installsuffix nocgo -o ./app'
+            }
+        }
+        stage('Upload to Nexus') {
+            steps {
+                // Замените FILE на ваш действительный файл
+                sh '''
+                   FILE=app
+                   curl -u "admin:Cnews220" \
+                        --upload-file $FILE \
+                        http://localhost:8081/repository/my_raw/$FILE
+                   '''
+            }
+        }
+    }
+}
+```
 
-
-
-
-
-
+![<6>](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/polomka/img/6.png)
+![<7>](https://github.com/Foxbeerxxx/DevOps.-CI-CD_08-1/blob/polomka/img/7.png)
